@@ -1,6 +1,7 @@
 ## MLND-Project
 
 Hello and welcome! 
+
 This repo contains all the codes and report I wrote during my Udacity Machine Learning Nano-degree.
 And please look at the .ipynb files, they are the core codes and results. 
 
@@ -13,7 +14,7 @@ By using Boston Housing dataset, and Decision Tree model from sklearn, to build 
 
 
 ###P2: Build a Student Intervention System
-Try three major classifier, Decision Tree, SVM and KNeighborsClassifier. To learn how to evaluate and tune models by metrics like f1_score.
+I tried three major classifiers in this project: Decision Tree, SVM and KNeighborsClassifier. In order to learn how to evaluate and tune models by metrics like f1_score.
 
 
 ###P3: Creating Customer Segments
