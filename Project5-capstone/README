@@ -1,0 +1,42 @@
+README
+
+The environment I'm using:
+	OS X 10.11.6, Python 2.7.12 | Anaconda 4.1.1(x_86-64)
+	
+	The tensorflow was intalled by conda env, referring "https://www.tensorflow.org/versions/r0.11/get_started/os_setup.html#anaconda-installation "
+	
+	Other package used in the project including: PIL 1.1.7, jupyter 4.4.0, scipy 0.18.0, numpy 1.11.1, 
+
+
+The folder contains 11 items:
+
+	The 'capstone_haoran.pdf' is the project report.
+
+	The cnn.ipynb, cnn.html, and checkpoint is derived from  jupyter notebook.
+
+	The sess1.ckpt and sess1.ckpt.meta are the model recorded after being trained. The model in cnn.ipynb can be restore by them, to continue training or predicting. 
+
+	The preprocess.py is for pre-processing the images and labels into uniform size, and save them in train_data.p, test_data.p, and va_data.p.
+
+	The train_data.p, test_data.p and va_data.p are pickle file can be directly imported and used by the model. 
+
+Examples:
+	To preprocessing: 
+
+		First, you can download and unzip the train.tar.gz, and test.tar.gz. 
+		
+		Second, randomly select some items of training set to form a validation set, copy the digitStruct.mat into the new folder as well. 
+		
+		Third, change the path in main function of preprocessing.py, to the actual folder path.
+		
+		Last, run the script, the train_data.p, test_data.p and va_data.p will be in the  project path.
+
+	To training;
+		Open the cnn.ipynb, run the first three cells, the model will be trained by the given train_data.p, test_data.p and va_data.p files.
+
+		After traning, the model will be save at the project path, named sess.ckpt. 
+
+		Also, while training, the total loss is recorded by steps, and you can check tensorborad to see the chart. For example, open a terminal, into your tensorflow environment(as for conda env, type:"source activate tensorflow"), then type: "python /you/path/anaconda2/pkgs/tensorflow-0.9.0-py27_0/lib/python2.7/site-packages/tensorflow/tensorboard/tensorboard.py  --logdir=/tmp/mnist_logs1"
+
+	To predict:
+		Run the forth cell in cnn.ipynb. The trained model can be restored and randomly select images from test set to predict.  
